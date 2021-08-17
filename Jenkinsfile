@@ -10,6 +10,7 @@ pipeline {
         stage('build&run') {
             steps {
                 sh 'docker build -t stephengrider/react-test -f ./client/Dockerfile.dev ./client'
+                sh 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
             }
         }
         stage('script') {
