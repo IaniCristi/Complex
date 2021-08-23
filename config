@@ -1,0 +1,35 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/iani/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Thu, 19 Aug 2021 14:36:03 EEST
+        provider: minikube.sigs.k8s.io
+        version: v1.22.0
+      name: cluster_info
+    server: https://192.168.49.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Thu, 19 Aug 2021 14:36:03 EEST
+        provider: minikube.sigs.k8s.io
+        version: v1.22.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: jenkins
+  user:
+    token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjQwdVJwN0RtMC1KYWRQbm9kaGZWSzlGWTItMmY4M18yckxGOFpwb2Q1Y2MifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImplbmtpbnMtdG9rZW4tbXFjcjYiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiamVua2lucyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjI5YTk5Mzc0LTMyYWUtNGJiZi1hYWIyLTljMTFjMDFmZDYyMCIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmplbmtpbnMifQ.49kiHxTkGkxC4fxr1mT_N-Cq-wtVy9mKuLLqu1IGD7RjuiPhi14LyYZc0mlmuejaWgDQERdXr37O7J9V-nodp-DP4msKt0GdtAlbml60pCSGUbP3d32NjXTfrp5ZFblzDUDflSjGp6mwqjbTPT06AHXXVPlZ9cXkxh7eRpfo90TT75C_HADZhAsA7qTmlM14KAPVzDualqDhRvERnN-X-k56lBXeOkbr-tkbB_Azx4ZO0u3ar2BqOx0cpXvHHw8kQTp-kiIKyFTgno-W8bP49LMQguP1EG2JnSwyMwbEYGLHlAdEo2H-5nWh9ms-Ar_biLrjadjF5bGVbg0cdvgEVA
+- name: minikube
+  user:
+    client-certificate: /home/iani/.minikube/profiles/minikube/client.crt
+    client-key: /home/iani/.minikube/profiles/minikube/client.key
